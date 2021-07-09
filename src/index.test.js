@@ -1,4 +1,4 @@
-import sum from './index';
+import sum from './_.js';
 
 describe('index', () => {
     it('adds1+2 to equal 3', () => {
