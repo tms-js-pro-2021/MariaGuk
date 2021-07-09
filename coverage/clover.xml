@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1625163382991" clover="3.2.0">
-  <project timestamp="1625163382992" name="All files">
-    <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="2" coveredelements="2" complexity="0" loc="1" ncloc="1" packages="1" files="1" classes="1"/>
-    <file name="index.js" path="C:\Users\maria\OneDrive\Рабочий стол\Новая папка\MariaGuk\src\index.js">
+<coverage generated="1625822923140" clover="3.2.0">
+  <project timestamp="1625822923140" name="All files">
+    <metrics statements="11" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3" elements="15" coveredelements="10" complexity="0" loc="11" ncloc="11" packages="2" files="3" classes="3"/>
+    <package name="src">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="2" count="1" type="stmt"/>
-    </file>
+      <file name="_.js" path="C:\Users\maria\OneDrive\Рабочий стол\TMS\react\Новая папка\MariaGuk\src\_.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="10" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <file name="date.js" path="C:\Users\maria\OneDrive\Рабочий стол\TMS\react\Новая папка\MariaGuk\src\utils\date.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="getAgeInDays.js" path="C:\Users\maria\OneDrive\Рабочий стол\TMS\react\Новая папка\MariaGuk\src\utils\getAgeInDays.js">
+        <metrics statements="9" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
