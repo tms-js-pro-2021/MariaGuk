@@ -7,7 +7,7 @@ export default function App() {
     const [passwordUnclean, setPasswordUnclean] = useState(false);
     const [loginErr, setLoginErr] = useState('Login can not be empty');
     const [passwordErr, setPasswordErr] = useState('Password can not be empty');
-    const [formValid, setFormValid] = useState(false)
+    const [formValid, setFormValid] = useState(false);
 
     // const inputLog = document.querySelector('.input__login');
     // const inputPass = document.querySelector('.input__pass');
@@ -30,7 +30,7 @@ export default function App() {
     const loginHandler = (e) => {
         setLogin(e.target.value)
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        if (re.test(String(e.target.vale).toLowerCase())) {
+        if (re.test(String(e.target.value).toLowerCase())) {
             setLoginErr('Invalid login')
         } else {
             setLoginErr('');
@@ -40,9 +40,9 @@ export default function App() {
 
     const passwordHandler = (e) => {
         setPassword(e.target.value)
-        if (e.target.value.length < 3 || e.target.value.length > 16) {
+        if (e.target.value.length <= 3 || e.target.value.length > 16) {
             setPasswordErr('Password must be longer than 3 and 16 characters')
-        } if (!e.target.value) {
+        } else if (!e.target.value) {
             setPasswordErr('Password can not be empty')
         }
         else {
@@ -57,7 +57,7 @@ export default function App() {
                 break
             case 'password':
                 setPasswordUnclean(true)
-                break
+
         }
     }
 
