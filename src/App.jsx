@@ -31,9 +31,9 @@ export default function App() {
         setLogin(e.target.value)
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if (re.test(String(e.target.value).toLowerCase())) {
-            setLoginErr('Invalid login')
+            setLoginErr('')
         } else {
-            setLoginErr('');
+            setLoginErr('Invalid login');
         }
     }
 
@@ -81,6 +81,7 @@ export default function App() {
                 Login
                 {(loginUnclean && loginErr) && <div style={{ color: 'red' }}>{loginErr}</div>}
                 <input
+                    name="login"
                     onChange={e => loginHandler(e)}
                     value={login}
                     onBlur={e => blurHandler(e)}
@@ -92,6 +93,7 @@ export default function App() {
                 Password
                 {(passwordUnclean && passwordErr) && <div style={{ color: 'red' }}>{passwordErr}</div>}
                 <input
+                    name='password'
                     onChange={e => passwordHandler(e)}
                     value={password}
                     onBlur={e => blurHandler(e)}
