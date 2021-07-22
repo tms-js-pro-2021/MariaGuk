@@ -1,2 +1,5 @@
 /node_modules
 /piblic/*.js
+/piblic/*LICENSE.txt
+/coverage
+.vscode
