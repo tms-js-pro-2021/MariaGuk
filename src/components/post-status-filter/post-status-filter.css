@@ -1,0 +1,17 @@
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 10px 40px 10px;
+}
+
+.button {
+  margin-left: 200px;
+  background-color: rgba(182, 119, 241, 0.336);
+  overflow: hidden;
+  border-radius: 12px;
+  border: 2px solid rgba(235, 151, 201, 0.719);
+  height: 46px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(255, 214, 214, 0.808);
+}

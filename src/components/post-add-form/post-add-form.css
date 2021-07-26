@@ -1,0 +1,28 @@
+.post-add-container {
+  margin-top: 40px;
+  margin-bottom: 90px;
+}
+
+.add-input {
+  width: 600px;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 3px solid rgb(211, 127, 190);
+  font-size: 18px;
+  outline: none;
+  padding: 12px;
+  font-weight: bold;
+  position: relative;
+  color: rgb(255, 249, 249);
+  margin-left: 70px;
+}
+
+.add-input:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+input.add-input::-webkit-input-placeholder {
+  color: rgb(255, 225, 243);
+}

